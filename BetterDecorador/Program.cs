@@ -15,11 +15,19 @@ namespace BetterDecorador
         /// <param name="args"></param>
         private static void Main(string[] args)
         {
-            char symbol = char.Parse(args[1]);
-            int num = int.Parse(args[2]);
+            if (args.Length == 0)
+            {
+                Console.WriteLine(Decor());
+            }
+            else
+            {
+                char symbol = char.Parse(args[1]);
+                int num = int.Parse(args[2]);
 
-            Decor(args[0], symbol, num);
-            Console.WriteLine(Decor(args[0], symbol, num));
+                Decor(args[0], symbol, num);
+                Console.WriteLine(Decor(args[0], symbol, num));
+            }
+
 
         }
 
@@ -43,6 +51,10 @@ namespace BetterDecorador
             }
 
             return $"{con} {s} {con}";
+        }
+        private static string Decor()
+        {
+            return Decor("User did not specify args!", '=', 3);
         }
     }
 }
