@@ -2,7 +2,9 @@
 
 namespace BetterDecorador
 {
-    /// 
+    /// <summary>
+    /// This program add characters behind and after the string 
+    /// </summary>
     public class Program
     {
         /// <summary>
