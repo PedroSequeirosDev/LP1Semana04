@@ -52,6 +52,11 @@ namespace BetterDecorador
 
             return $"{con} {s} {con}";
         }
+        /// <summary>
+        /// Decor method, which returns a specific message when the user 
+        /// does not specify what arguments are to be used
+        /// </summary>
+        /// <returns></returns>
         private static string Decor()
         {
             return Decor("User did not specify args!", '=', 3);
