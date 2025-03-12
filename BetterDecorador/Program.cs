@@ -16,8 +16,14 @@ namespace BetterDecorador
 
         private static string Decor(string s, char dec, int i)
         {
+            string conv = Convert.ToString(dec);
 
-            return $"{i}*{dec} {s} {dec}*{i}";
+            for (int f = i - 1; f > 0; f--)
+            {
+                conv += dec;
+            }
+
+            return $"{conv} {s} {conv}";
         }
     }
 }
